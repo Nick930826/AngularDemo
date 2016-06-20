@@ -25,6 +25,18 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     controller: 'ReaderCreateCtrl'
   });
 
+  $stateProvider.state('thread', {
+    url: '/thread',
+    template: '<div ui-view></div>',
+    abstract:true
+  });
+
+  $stateProvider.state('thread.list', {
+    url: '/list',
+    templateUrl: 'controllers/thread/list.html',  
+    controller: 'ThreadListCtrl'
+  });
+
   $stateProvider.state('notFound', {
     url: '/notFound',
     templateUrl: 'controllers/home/notFound.html',

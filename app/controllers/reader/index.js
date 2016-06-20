@@ -5,6 +5,7 @@
 
 angular.module('app').controller('ReaderCreateCtrl', function ReaderCreateCtrl($scope) {
   var vm = $scope.vm = {};
+  
   vm.submit = function (form) {
     console.log(form);
   }
